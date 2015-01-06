@@ -109,3 +109,161 @@
 	margin:2% auto;
 	border-radius: 10px;
 }
+
+.view {
+	padding-top: 5%;
+}
+
+.loginContainer {
+	width:30%;
+	font-size: 2rem;
+	margin:auto;
+	text-align: center;
+	padding:4%;
+	padding-bottom: 6%;
+	border:solid white;
+	border-radius: 30px;
+	background: #FF9C00 !important;
+	box-shadow: 30px 30px 10px black; 
+}
+
+.loginContainer>p {
+	text-align: left !important;
+}
+
+.loginDiv,
+.registerDiv {
+	padding:0.5%;
+	padding-bottom: 2%;
+	border-bottom: solid black;
+	font-weight: bold;
+}
+
+.userNameDiv,
+.passwordDiv {
+	width:100%;
+	margin:auto;
+	margin-top:4%;
+	text-align: left;
+	font-size: 1.5rem !important;
+}
+
+.userNameRegDiv,
+.passwordRegDiv,
+.nameDiv,
+.phoneDiv,
+.confirmPasswordDiv,
+.emailDiv,
+.townDiv {
+	width:90%;
+	margin:auto;
+	margin-top:4%;
+	text-align: left;
+	font-size: 1.5rem !important;
+}
+
+.passwordDiv {
+	margin-bottom: 5%;
+}
+
+.phoneDiv,
+.townDiv {
+	margin-bottom: 6%;
+}
+
+.userNameDiv>input,
+.passwordDiv>input {
+	width: 97%;
+	height: 35px;
+	outline: none;
+	padding: 0.5%;
+	padding-left: 1%;
+	font-size: 1.4rem;
+}
+
+.userNameRegDiv>input,
+.passwordRegDiv>input,
+.nameDiv>input,
+.phoneDiv>input,
+.confirmPasswordDiv>input,
+.emailDiv>input,
+.townDiv>input {
+	width: 97%;
+	height: 35px;
+	outline: none;
+	padding: 0.5%;
+	padding-left: 1%;
+	font-size: 1.4rem;
+}
+
+.emptyDiv {
+	height: 86px;
+}
+
+.submitButton {
+	width:50%;
+	height: 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	float: left;
+	font-size: 1.6rem;
+	outline: none;
+	color:white;
+	background: -webkit-linear-gradient(left, grey , black) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, grey , black) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, grey , black) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, grey , black) !important; /* Standard syntax */
+}
+
+.registerButton {
+	width: 60%;
+	height: 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.6rem;
+	outline: none;
+	color:white;
+	background: -webkit-linear-gradient(left, grey , black) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, grey , black) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, grey , black) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, grey , black) !important; /* Standard syntax */
+}
+
+.linkRegister {
+	font-size: 1.5rem;
+	float: right;
+}
+
+.linkLogin {
+	font-size: 1.5rem;
+}
+
+.registerContainer {
+	width:70%;
+	height: 420px;
+	font-size: 2rem;
+	margin:auto;
+	margin-top: -3%;
+	text-align: center;
+	padding-top:1%;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 6%;
+	border:solid white;
+	border-radius: 30px;
+	background: #FF9C00 !important;
+	box-shadow: 30px 30px 10px black; 
+}
+
+.leftSideOfRegForm,
+.rightSideOfRegForm {
+	width:48%; 
+}
+
+.leftSideOfRegForm {
+	float:left;
+}
+
+.rightSideOfRegForm {
+	float:right;
+}

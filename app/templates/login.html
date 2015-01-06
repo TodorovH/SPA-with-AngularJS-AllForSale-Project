@@ -1,9 +1,17 @@
-<div ng-class='loginContainer'>
-	<form name="myForm" ng-controller="FormController" ng-class="my-form">
-		<span>Login</span>
-		<p>Username:</p>
-		<input type='text' name="inputUserName" ng-model="userType" placeholder='Username...' required/><br />
-		<p>Password:</p>
-		<input type='password' name="inputPassword" ng-model="passType" placeholder='Password...' required/><br />
+<div ng-class='loginContainer' ng-controller="LoginController">
+	<form name="myLoginForm" ng-class="my-login-form">
+		<div ng-class='loginDiv'>Login</div>
+		<div ng-class='userNameDiv'>
+			Username:<br />
+			<input type='text' id="inputUserName" ng-model="userType" placeholder='Username...' required/>
+		</div>
+		<div ng-class='passwordDiv'>
+			Password:<br />
+			<input type='password' id="inputPassword" ng-model="passType" placeholder='Password...' required/>
+		</div>
+		<input type='button' id="submitButton" ng-model="button" value='Login' ng-class='submitButton'/>
+		<div ng-class='linkRegister'>
+			<a href="#/register">Register here</a>
+		</div>
 	</form>
 </div>

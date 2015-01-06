@@ -14,4 +14,5 @@ softUni.controller('MainController',
 		$scope.footer = 'footer';
 		$scope.footerLeftSide = 'footerLeftSide';
 		$scope.section = 'section';
+		$scope.view = 'view';
 });

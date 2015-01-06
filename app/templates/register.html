@@ -1,0 +1,43 @@
+<div ng-class='registerContainer' ng-controller="RegisterController">
+	<form name="myRegisterForm" ng-class="my-register-form">
+		<div ng-class='registerDiv'>User Registration</div>
+		<div ng-class='leftSideOfRegForm'>
+			<div ng-class='userNameRegDiv'>
+				Username:<br />
+				<input type='text' id="inputUserRegName" ng-model="userRegType" placeholder='Username...' required/>
+			</div>
+			<div ng-class='passwordRegDiv'>
+				Password:<br />
+				<input type='password' id="inputPasswordReg" ng-model="passRegType" placeholder='Password...' required/>
+			</div>
+			<div ng-class='nameDiv'>
+				Name:<br />
+				<input type='text' id="inputName" ng-model="nameType" placeholder='Full name...' required/>
+			</div>
+			<div ng-class='phoneDiv'>
+				Password:<br />
+				<input type='text' id="inputPhone" ng-model="phoneType" placeholder='Phone number...' />
+			</div>
+			<input type='button' id="registerButton" ng-model="button" value='Register' ng-class='registerButton'/>
+		</div>
+		<div ng-class='rightSideOfRegForm'>
+			<div ng-class='emptyDiv'>
+			</div>
+			<div ng-class='confirmPasswordDiv'>
+				Confirm password:<br />
+				<input type='password' id="inputConfirmPassword" ng-model="confPassType" placeholder='Confirm password...' required/>
+			</div>
+			<div ng-class='emailDiv'>
+				Email:<br />
+				<input type='text' id="inputEmail" ng-model="emailType" placeholder='Email...' />
+			</div>
+			<div ng-class='townDiv'>
+				Town:<br />
+				<input type='text' id="inputTown" ng-model="townType" />
+			</div>
+			<div ng-class='linkLogin'>
+				<a href="#/login">Login here</a>
+			</div>
+		</div>
+	</form>
+</div>
