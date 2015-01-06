@@ -1,8 +1,6 @@
 
 softUni.controller('MainController',
 	function($scope) {
-		$scope.name = 'Hristo';
-
 		$scope.body = 'body';
 		$scope.mainContainer = 'mainContainer';
 		$scope.header = 'header';

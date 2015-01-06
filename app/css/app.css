@@ -103,7 +103,9 @@
 }
 
 .section {
-	width:90%;
+	width:95%;
+	min-height: 620px;
 	background:white;
-	margin:3% auto;
+	margin:2% auto;
+	border-radius: 10px;
 }
