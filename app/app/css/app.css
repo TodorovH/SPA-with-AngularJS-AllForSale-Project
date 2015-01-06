@@ -1,0 +1,111 @@
+.body {
+	background-color: lightgrey;
+	padding:0;
+	margin:0;
+	font-size: 15px;
+}
+
+.mainContainer {
+	width:80%;
+	margin:0 auto;
+}
+
+.header,
+.footer {
+	display:inline-flex;
+	width:100%;
+	height: 120px;
+	background: -webkit-linear-gradient(grey, black); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(grey, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(grey, black); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(grey, black); /* Standard syntax */
+}
+
+.logoContainer {
+	width:30%;
+	padding:1%;
+	padding-left:20%;
+}
+
+.firstHalfOfTheLogo {
+	width:70%;
+	color:white;
+	font-size: 4rem;
+	cursor: pointer;
+}
+
+.secondHalfOfTheLogo {
+	position: absolute;
+	top:1%;
+	left:31%;
+	color:orange;
+	cursor: pointer;
+	font-size: 7rem;
+	-ms-transform: rotate(-34deg); /* IE 9 */
+    -webkit-transform: rotate(-34deg); /* Chrome, Safari, Opera */
+    transform: rotate(-34deg);
+}
+
+.divLink {
+	text-decoration: none;
+	color:inherit;
+}
+
+.navLink {
+	text-decoration: none;
+	color:white;
+}
+
+.navbar {
+	width:30%;
+	float:right;
+	display:inline-flex;
+	color:white;
+	padding-top: 3%;
+	margin-left: 3%;
+	font-size: 1.5rem;
+}
+
+.navigation {
+	width:50%;
+	height: 40px;
+	margin-left: 2%;
+	border-radius: 20%;
+	/*background: orange !important;*/
+	text-align: center;
+	padding-top: 3%;
+	cursor: pointer;
+	background: -webkit-linear-gradient(left, grey , black) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, grey , black) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, grey , black) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, grey , black) !important; /* Standard syntax */
+}
+
+.navigation:hover {
+	color:black;
+	background: -webkit-linear-gradient(left, white , #FF9C00) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, white , #FF9C00) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, white , #FF9C00) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, white , #FF9C00) !important; /* Standard syntax */
+}
+
+.navigation:active {
+	color:black;
+	background: -webkit-linear-gradient(left, #FF9C00, white) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #FF9C00, white) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #FF9C00, white) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FF9C00, white) !important; /* Standard syntax */
+}
+
+.footerLeftSide {
+	color:white;
+	padding:4%;
+}
+
+.section {
+	width:95%;
+	min-height: 620px;
+	background:white;
+	margin:2% auto;
+	border-radius: 10px;
+}
