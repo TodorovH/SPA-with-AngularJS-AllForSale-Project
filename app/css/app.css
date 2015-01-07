@@ -97,11 +97,6 @@
     background: linear-gradient(to right, #FF9C00, white) !important; /* Standard syntax */
 }
 
-.footerLeftSide {
-	color:white;
-	padding:4%;
-}
-
 .section {
 	width:95%;
 	min-height: 620px;
@@ -265,5 +260,157 @@
 }
 
 .rightSideOfRegForm {
-	float:right;
+	float: right;
+}
+
+.container {
+	width: 100%;
+	display: inline-flex;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
+}
+
+.addsContainer {
+	width: 65%;
+	min-height: 520px;
+	margin-right: 3%; 
+	border-radius: 10px;
+	background: lightgrey;
+}
+
+.footerLeftSide {
+	color: white;
+	padding: 4%;
+}
+
+.removeListStyle {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.addContainer {
+	width:70%;
+	margin:3% auto;
+	background:#FF9C00;
+	border-radius: 10px;
+	border:solid white;
+}
+
+.addHeader {
+	display: inline-flex;
+	width: 100%;
+	padding:2%;
+}
+
+.titleContainer {
+	position: relative;
+	width: 70%;
+	left: -16%;
+	padding: 2%;
+	font-size: 2rem;
+	color: white;
+	background: -webkit-linear-gradient(grey, black); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(grey, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(grey, black); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(grey, black); /* Standard syntax */
+}
+
+.dateContainer {
+	width: 25%;
+	padding: 3%;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.addBody {
+	display: inline-flex;
+	width: 100%;
+}
+
+.addImg {
+	width: 100%;
+}
+
+.imgContainer {
+	width: 30%;
+	margin: 3%;
+	padding: 3%;
+	background: #F7BC50;
+}
+
+.infoContainer {
+	width:70%;
+	padding:3%;
+	padding-right: 0;
+	margin-right: 3%;
+}
+
+.textContainer {
+	background: #F7BC50;
+	font-size: 1.2rem;
+	padding:2%;
+}
+
+.nameContainer,
+.emailContainer,
+.phoneContainer {
+	width:100%;
+	display: inline-flex;
+	margin-top: 2%;
+}
+
+.ownerName,
+.ownerEmail,
+.ownerPhone {
+	width: 83%;
+	background: #F7BC50;
+	font-size: 1.2rem;
+	padding:2%;
+}
+
+.leftSide {
+	width:17%;
+	padding:3% 0;
+}
+
+.filtersContainer {
+	width: 19%;
+	min-height: 520px;
+	border-radius: 10px;
+	background: lightgrey;
+	padding:2%;
+}
+
+.filterCategory,
+.filterTowns {
+	border-radius: 10px;
+	background: #FF9C00;
+	font-size: 1.2rem;
+	padding:10%;
+}
+
+.filterCategory {
+	margin-bottom: 12%;
+}
+
+.headerCategory,
+.headerTowns {
+	padding:0.5%;
+	padding-bottom: 2%;
+	border-bottom: solid black;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.hoverAdd {
+	padding-left: 2%;
+	border-radius: 5px;
+}
+
+.hoverAdd:hover {
+	cursor:pointer;
+	background: #F7BC50;
 }
