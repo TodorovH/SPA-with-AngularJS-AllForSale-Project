@@ -1,0 +1,22 @@
+<div ng-class='filterCategory' ng-controller='RightSideController'>
+	<div ng-class='headerCategory'>
+		Category
+	</div>
+	<div ng-class='hoverAdd'>
+		<em>All</em>
+	</div>
+	<div ng-repeat='category in categories' ng-class='hoverAdd'>
+		{{category.name}}
+	</div>
+</div>
+<div ng-class='filterTowns' ng-controller='RightSideController'>
+	<div ng-class='headerTowns'>
+		Towns
+	</div>
+	<div ng-class='hoverAdd'>
+		<em>All</em>
+	</div>
+	<div ng-repeat='town in towns' ng-class='hoverAdd'>
+		{{town.name}}
+	</div>
+</div>
