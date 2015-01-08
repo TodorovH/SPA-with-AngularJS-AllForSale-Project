@@ -6,11 +6,33 @@ softUni.factory('authentication', ['localStorageService', function(localStorageS
 	}
 
 	function getUserData(data) {
-		localStorageService.get(key);
+		return localStorageService.get(key);
+	}
+
+	function getHeaders() {
+		var headers = {};
+		var userData = getUserData();
+		if (userData) {
+			headers.Authorization = 'Bearer ' + getUserData().access_token;
+		}
+
+		return headers;
+	}
+
+	function isAdmin() {
+		var isAdmin = getUserData().isAdmin;
+		return isAdmin;
+	}
+
+	function removeUser() {
+		return localStorageService.clearAll();
 	}
 
 	return {
 		saveUser: saveUserData,
-		getUser: getUserData
+		getUser: getUserData,
+		getHeaders: getHeaders,
+		removeUser: removeUser,
+		isAdmin: isAdmin
 	}
 }]);

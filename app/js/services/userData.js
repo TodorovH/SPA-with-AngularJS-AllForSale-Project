@@ -1,8 +1,8 @@
 softUni.factory('userData',['$resource', 'authentication', function($resource, authentication) {
-	var resource = $resource('http://softuni-ads.azurewebsites.net/api/user/register');
+	var resource = 'http://softuni-ads.azurewebsites.net/api/';
 
 	function registerUser(user) {
-		return resource
+		return $resource(resource + 'user/register')
 				.save(user)
 				.$promise
 				.then(function(data) {
@@ -11,11 +11,21 @@ softUni.factory('userData',['$resource', 'authentication', function($resource, a
 	}
 
 	function loginUser(user) {
-		// body...
+		return $resource(resource + 'user/login')
+				.save(user)
+				.$promise
+				.then(function(data) {
+					authentication.saveUser(data);
+				});
 	}
 
 	function logoutUser() {
-		// body...
+		return $resource(resource + 'user/logout')
+				.save(user)
+				.$promise
+				.then(function(data) {
+					authentication.removeUser();
+				});
 	}
 
 
