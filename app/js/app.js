@@ -1,5 +1,6 @@
-var softUni = angular.module('softUniModule', ['ngResource', 'ngRoute'])
-.config(function($routeProvider) {
+var softUni = angular.module('softUniModule', ['ngResource', 'ngRoute', 'LocalStorageModule']);
+
+softUni.config(['$routeProvider', 'localStorageServiceProvider', function($routeProvider, localStorageServiceProvider) {
 	$routeProvider.when('/adds', {
 		templateUrl: 'templates/adds.html'
 	});
@@ -10,4 +11,8 @@ var softUni = angular.module('softUniModule', ['ngResource', 'ngRoute'])
 		templateUrl: 'templates/register.html'
 	});
 	$routeProvider.otherwise({redirectTo: '/adds'});
-});
+
+	// Web Storage settings
+	localStorageServiceProvider.setStorageType('localStorage');
+	localStorageServiceProvider.setPrefix('allForSaleApp');
+}]);

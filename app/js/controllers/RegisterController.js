@@ -21,5 +21,5 @@ softUni.controller('RegisterController',['$scope', 'mainData', 'userData',
 
 		$scope.register = function(user) {
 			userData.register(user);
-		}
+		};
 }]);

@@ -1,8 +1,13 @@
-softUni.factory('userData',['$resource', function($resource) {
+softUni.factory('userData',['$resource', 'authentication', function($resource, authentication) {
 	var resource = $resource('http://softuni-ads.azurewebsites.net/api/user/register');
 
 	function registerUser(user) {
-		return resource.save(user);
+		return resource
+				.save(user)
+				.$promise
+				.then(function(data) {
+					authentication.saveUser(data);
+				});
 	}
 
 	function loginUser(user) {
@@ -55,4 +60,4 @@ softUni.factory('userData',['$resource', function($resource) {
 	//		})
 	//	}
 	//}
-}])
+}]);
