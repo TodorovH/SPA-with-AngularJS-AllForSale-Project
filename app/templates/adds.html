@@ -1,70 +1,8 @@
 <div ng-class='container' ng-controller='AddsController'>
-	<div ng-class='addsContainer'>
-		<ul ng-class='removeListStyle'>
-			<li ng-repeat='add in data.ads'>
-				<div ng-class='addContainer'>
-					<div ng-class='addHeader'>
-						<div ng-class='titleContainer'>
-							{{add.title}}
-						</div>
-						<div ng-class='dateContainer'>
-							{{add.date | date: 'dd-MMM-yyyy'}}
-						</div>
-					</div>
-					<div ng-class='addBody'>
-						<div ng-class='imgContainer'>
-							<img src="" ng-src='{{add.imageDataUrl}}' ng-class='addImg' />
-						</div>
-						<div ng-class='infoContainer'>
-							<div ng-class='textContainer'>
-								{{add.text}}
-							</div>
-							<div ng-class='nameContainer'>
-								<div ng-class='leftSide'>Name:</div>
-								<div ng-class='ownerName'>
-									{{add.ownerName}}
-								</div>
-							</div>
-							<div ng-class='emailContainer'>
-								<div ng-class='leftSide'>Email:</div>
-								<div ng-class='ownerEmail'>
-									{{add.ownerEmail}}
-								</div>
-							</div>
-							<div ng-class='phoneContainer'>
-								<div ng-class='leftSide'>Tel:</div>
-								<div ng-class='ownerPhone'>
-									{{add.ownerPhone}}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
+	<div ng-class='addsContainer' ng-include="templateAdds">
+		
 	</div>
-	<div ng-class='filtersContainer'>
-		<div ng-class='filterCategory'>
-			<div ng-class='headerCategory'>
-				Category
-			</div>
-			<div ng-class='hoverAdd'>
-				<em>All</em>
-			</div>
-			<div ng-repeat='category in categories' ng-class='hoverAdd'>
-				{{category.name}}
-			</div>
-		</div>
-		<div ng-class='filterTowns'>
-			<div ng-class='headerTowns'>
-				Towns
-			</div>
-			<div ng-class='hoverAdd'>
-				<em>All</em>
-			</div>
-			<div ng-repeat='town in towns' ng-class='hoverAdd'>
-				{{town.name}}
-			</div>
-		</div>
+	<div ng-class='filtersContainer' ng-include="templateFilters">
+		
 	</div>
 </div>

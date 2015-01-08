@@ -18,7 +18,7 @@ softUni.controller('LeftSideController',
 		$scope.ownerPhone = 'ownerPhone';
 		$scope.leftSide = 'leftSide';
 
-		mainData.getAdds(function(resp) {
+		mainData.getAllAdds(function(resp) {
 			$scope.data = resp;
 		});
 });

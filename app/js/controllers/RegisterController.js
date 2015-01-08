@@ -20,7 +20,6 @@ softUni.controller('RegisterController',
 		});
 
 		$scope.register = function(user) {
-			//userData.register(user);
-			console.log(user);
+			userData.register(user);
 		}
 });

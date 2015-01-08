@@ -6,10 +6,10 @@ softUni.controller('RightSideController',
 		$scope.headerTowns = 'headerTowns';
 		$scope.hoverAdd = 'hoverAdd';
 
-		mainData.getTowns(function(resp) {
+		mainData.getAllTowns(function(resp) {
 			$scope.towns = resp;
 		});
-		mainData.getCategories(function(resp) {
+		mainData.getAllCategories(function(resp) {
 			$scope.categories = resp;
 		});
 });
