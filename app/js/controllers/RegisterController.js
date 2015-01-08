@@ -1,5 +1,5 @@
-softUni.controller('RegisterController',
-	function($scope, mainData) {
+softUni.controller('RegisterController',['$scope', 'mainData', 'userData',
+	function($scope, mainData, userData) {
 		$scope.registerContainer = 'registerContainer';
 		$scope.registerDiv = 'registerDiv';
 		$scope.leftSideOfRegForm = 'leftSideOfRegForm';
@@ -22,4 +22,4 @@ softUni.controller('RegisterController',
 		$scope.register = function(user) {
 			userData.register(user);
 		}
-});
+}]);

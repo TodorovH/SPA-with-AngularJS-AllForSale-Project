@@ -1,4 +1,4 @@
-var softUni = angular.module('softUniModule', ['ngRoute'])
+var softUni = angular.module('softUniModule', ['ngResource', 'ngRoute'])
 .config(function($routeProvider) {
 	$routeProvider.when('/adds', {
 		templateUrl: 'templates/adds.html'
