@@ -1,38 +1,39 @@
 <ul ng-class='removeListStyle' ng-controller='LeftSideController'>
-	<li ng-repeat='add in data.ads'>
-		<div ng-class='addContainer'>
-			<div ng-class='addHeader'>
+	<img src="img/loading.gif" ng-hide="ready">
+	<li ng-repeat='ad in data.ads'>
+		<div ng-class='adContainer'>
+			<div ng-class='adHeader'>
 				<div ng-class='titleContainer'>
-					{{add.title}}
+					{{ad.title}}
 				</div>
 				<div ng-class='dateContainer'>
-					{{add.date | date: 'dd-MMM-yyyy'}}
+					{{ad.date | date: 'dd-MMM-yyyy'}}
 				</div>
 			</div>
-			<div ng-class='addBody'>
+			<div ng-class='adBody'>
 				<div ng-class='imgContainer'>
-					<img src="" ng-src='{{add.imageDataUrl}}' ng-class='addImg' />
+					<img src="" ng-src='{{ad.imageDataUrl ? ad.imageDataUrl : "img/No_Image_Available.png"}}' ng-class='adImg' />
 				</div>
 				<div ng-class='infoContainer'>
 					<div ng-class='textContainer'>
-						{{add.text}}
+						{{ad.text}}
 					</div>
 					<div ng-class='nameContainer'>
 						<div ng-class='leftSide'>Name:</div>
 						<div ng-class='ownerName'>
-							{{add.ownerName}}
+							{{ad.ownerName}}
 						</div>
 					</div>
 					<div ng-class='emailContainer'>
 						<div ng-class='leftSide'>Email:</div>
 						<div ng-class='ownerEmail'>
-							{{add.ownerEmail}}
+							{{ad.ownerEmail}}
 						</div>
 					</div>
 					<div ng-class='phoneContainer'>
 						<div ng-class='leftSide'>Tel:</div>
 						<div ng-class='ownerPhone'>
-							{{add.ownerPhone}}
+							{{ad.ownerPhone}}
 						</div>
 					</div>
 				</div>

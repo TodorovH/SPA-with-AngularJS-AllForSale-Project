@@ -1,5 +1,5 @@
-softUni.controller('RegisterController',['$scope', 'mainData', 'userData',
-	function($scope, mainData, userData) {
+softUni.controller('RegisterController',['$scope', '$location', 'townsData', 'userData',
+	function($scope, $location, townsData, userData) {
 		$scope.registerContainer = 'registerContainer';
 		$scope.registerDiv = 'registerDiv';
 		$scope.leftSideOfRegForm = 'leftSideOfRegForm';
@@ -14,12 +14,22 @@ softUni.controller('RegisterController',['$scope', 'mainData', 'userData',
 		$scope.townDiv = 'townDiv';
 		$scope.registerButton = 'registerButton';
 		$scope.linkLogin = 'linkLogin';
-
-		mainData.getAllTowns(function(resp) {
-			$scope.towns = resp;
-		});
+		
+		townsData.getAllTowns()
+			.$promise
+			.then(function(data) {
+				$scope.towns = data;
+			});
+		
 
 		$scope.register = function(user) {
-			userData.register(user);
+			userData.register(user)
+				.$promise
+				.then(function(user) {
+					userData.login(user);
+				})
+				.then(function() {
+					$location.path('templates/ads');
+				});
 		};
 }]);

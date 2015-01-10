@@ -1,4 +1,14 @@
 <div ng-class='loginContainer' ng-controller="LoginController">
+
+	<div ng-class='navbar' ng-controller="LoginController" ng-switch on="isLoggedIn">
+		<div ng-switch-when="true" ng-class='loginAndRegButtons'>
+			<div ng-include="loginTemplate" ng-class='loginAndRegButtons'></div>
+		</div>
+		<div ng-switch-default ng-class='loginAndRegButtons'>
+			<div ng-include="defaultTemplate" ng-class='loginAndRegButtons'></div>
+		</div>
+	</div>
+	
 	<form name="myLoginForm" ng-class="my-login-form">
 		<div ng-class='loginDiv'>Login</div>
 		<div ng-class='userNameDiv'>

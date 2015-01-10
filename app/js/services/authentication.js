@@ -28,11 +28,16 @@ softUni.factory('authentication', ['localStorageService', function(localStorageS
 		return localStorageService.clearAll();
 	}
 
+	function isLoggedIn() {
+		return !!getUserData();
+	}
+
 	return {
 		saveUser: saveUserData,
 		getUser: getUserData,
 		getHeaders: getHeaders,
 		removeUser: removeUser,
-		isAdmin: isAdmin
+		isAdmin: isAdmin,
+		isLoggedIn: isLoggedIn
 	}
 }]);

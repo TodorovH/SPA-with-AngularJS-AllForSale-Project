@@ -1,4 +1,14 @@
 <div ng-class='registerContainer' ng-controller="RegisterController">
+
+	<div ng-class='navbar' ng-controller="LoginController" ng-switch on="isLoggedIn">
+		<div ng-switch-when="true" ng-class='loginAndRegButtons'>
+			<div ng-include="loginTemplate" ng-class='loginAndRegButtons'></div>
+		</div>
+		<div ng-switch-default ng-class='loginAndRegButtons'>
+			<div ng-include="defaultTemplate" ng-class='loginAndRegButtons'></div>
+		</div>
+	</div>
+	
 	<form name="myRegisterForm" ng-class="my-register-form">
 		<div ng-class='registerDiv'>User Registration</div>
 		<div ng-class='leftSideOfRegForm'>

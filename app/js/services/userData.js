@@ -2,21 +2,24 @@ softUni.factory('userData',['$resource', 'authentication', function($resource, a
 	var resource = 'http://softuni-ads.azurewebsites.net/api/';
 
 	function registerUser(user) {
-		return $resource(resource + 'user/register')
-				.save(user)
-				.$promise
+		var resource = $resource(resource + 'user/register')
+				.save(user);
+
+		resource.$promise
 				.then(function(data) {
 					authentication.saveUser(data);
 				});
+		return 	resource;		
 	}
 
 	function loginUser(user) {
-		return $resource(resource + 'user/login')
-				.save(user)
-				.$promise
+		var resource = $resource(resource + 'user/login')
+				.save(user);
+		resource.$promise
 				.then(function(data) {
 					authentication.saveUser(data);
 				});
+		return resource;
 	}
 
 	function logoutUser() {
@@ -34,40 +37,4 @@ softUni.factory('userData',['$resource', 'authentication', function($resource, a
 		login: loginUser,
 		logout: logoutUser
 	}
-	//return {
-	//	register: function(success, user) {
-	//		$http({
-	//			method: 'POST',
-	//			url: 'http://softuni-ads.azurewebsites.net/api/user/register',
-	//			data: JSON.stringify(user)
-	//		})
-	//		.success(function(data){
-	//			success(data);
-	//		})
-	//	},
-	//	login: function(success) {
-	//		$http({
-	//			method: 'POST',
-	//			url: 'http://softuni-ads.azurewebsites.net/api/towns'
-	//		})
-	//		.success(function(user){
-	//			success(user);
-	//		})
-	//		.error(function(user){
-	//			
-	//		})
-	//	},
-	//	logout: function(success) {
-	//		$http({
-	//			method: 'GET',
-	//			url: 'http://softuni-ads.azurewebsites.net/api/categories'
-	//		})
-	//		.success(function(){
-	//			success();
-	//		})
-	//		.error(function(){
-	//			
-	//		})
-	//	}
-	//}
 }]);

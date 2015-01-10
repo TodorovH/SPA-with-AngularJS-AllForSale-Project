@@ -57,12 +57,34 @@
 }
 
 .navbar {
+	position: absolute;
+	top:0;
 	width:30%;
 	float:right;
 	display:inline-flex;
 	color:white;
 	padding-top: 3%;
 	margin-left: 3%;
+	font-size: 1.5rem;
+}
+
+.navbarInHomePage {
+	position: absolute;
+	top:0;
+	left:50%;
+	width:30%;
+	float:right;
+	display:inline-flex;
+	color:white;
+	padding-top: 3%;
+	margin-left: 3%;
+	font-size: 1.5rem;
+}
+
+.loginAndRegButtons {
+	width:100%;
+	display:inline-flex;
+	color:white;
 	font-size: 1.5rem;
 }
 
@@ -279,7 +301,7 @@
 	padding-bottom: 5%;
 }
 
-.addsContainer {
+.adsContainer {
 	width: 65%;
 	min-height: 520px;
 	margin-right: 3%; 
@@ -298,7 +320,12 @@
 	padding:0;
 }
 
-.addContainer {
+.removeListStyle>img {
+	width:20%;
+	margin:25% 40%;
+}
+
+.adContainer {
 	width:70%;
 	margin:3% auto;
 	background:#FF9C00;
@@ -306,7 +333,7 @@
 	border:solid white;
 }
 
-.addHeader {
+.adHeader {
 	display: inline-flex;
 	width: 100%;
 	padding:2%;
@@ -332,12 +359,12 @@
 	color: white;
 }
 
-.addBody {
+.adBody {
 	display: inline-flex;
 	width: 100%;
 }
 
-.addImg {
+.adImg {
 	width: 100%;
 }
 
@@ -413,12 +440,20 @@
 	margin-bottom: 5%;
 }
 
-.hoverAdd {
+.hoverAd {
 	padding-left: 2%;
 	border-radius: 5px;
 }
 
-.hoverAdd:hover {
+.hoverAd:hover {
 	cursor:pointer;
 	background: #F7BC50;
+}
+
+.hoverAdselected {
+	cursor:pointer;
+	background: black;
+	color:white;
+	border-radius: 5px;
+	font-weight: bold;
 }

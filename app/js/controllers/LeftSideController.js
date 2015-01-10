@@ -1,13 +1,13 @@
-softUni.controller('LeftSideController',
-	function($scope, mainData) {
+softUni.controller('LeftSideController', [ '$scope', '$rootScope', 'filter', 'mainData',
+	function($scope, $rootScope, filter, mainData) {
 		$scope.removeListStyle = 'removeListStyle';
-		$scope.addContainer = 'addContainer';
-		$scope.addHeader = 'addHeader';
+		$scope.adContainer = 'adContainer';
+		$scope.adHeader = 'adHeader';
 		$scope.titleContainer = 'titleContainer';
 		$scope.dateContainer = 'dateContainer';
-		$scope.addBody = 'addBody';
+		$scope.adBody = 'adBody';
 		$scope.imgContainer = 'imgContainer';
-		$scope.addImg = 'addImg';
+		$scope.adImg = 'adImg';
 		$scope.infoContainer = 'infoContainer';
 		$scope.textContainer = 'textContainer';
 		$scope.nameContainer = 'nameContainer';
@@ -18,7 +18,26 @@ softUni.controller('LeftSideController',
 		$scope.ownerPhone = 'ownerPhone';
 		$scope.leftSide = 'leftSide';
 
-		mainData.getAllAdds(function(resp) {
-			$scope.data = resp;
+		$scope.ready = false;
+
+		function loadPublicAds (filterParams) {
+			$rootScope.elementId = filterParams;
+			filterParams = filterParams || {};
+			mainData.getAllAds(filterParams)
+				.$promise
+				.then(function(data) {
+					$scope.data = data;
+					$scope.ready = true;
+				});
+		}
+		
+		loadPublicAds();
+
+		$scope.$on('categoryClicked', function (event, category) {
+			loadPublicAds(filter.getFilterParams());
 		});
-});
+
+		$scope.$on('townClicked', function (event, town) {
+			loadPublicAds(filter.getFilterParams());
+		});
+}]);

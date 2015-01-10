@@ -2,10 +2,10 @@
 	<div ng-class='headerCategory'>
 		Category
 	</div>
-	<div ng-class='hoverAdd'>
+	<div class='hoverAdselected' ng-click="categoryClicked(category)" onclick="changeClass(this)">
 		<em>All</em>
 	</div>
-	<div ng-repeat='category in categories' ng-class='hoverAdd'>
+	<div ng-repeat='category in categories' class='hoverAd' ng-click="categoryClicked(category)" onclick="changeClass(this)">
 		{{category.name}}
 	</div>
 </div>
@@ -13,10 +13,10 @@
 	<div ng-class='headerTowns'>
 		Towns
 	</div>
-	<div ng-class='hoverAdd'>
+	<div class='hoverAdselected' ng-click="townClicked(town)" onclick="changeClass(this)">
 		<em>All</em>
 	</div>
-	<div ng-repeat='town in towns' ng-class='hoverAdd'>
+	<div ng-repeat='town in towns' class='hoverAd' ng-click="townClicked(town)" onclick="changeClass(this)">
 		{{town.name}}
 	</div>
 </div>

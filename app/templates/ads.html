@@ -1,0 +1,18 @@
+<div ng-class='container' ng-controller='AdsController'>
+
+	<div ng-class='navbarInHomePage' ng-controller="LoginController" ng-switch on="isLoggedIn">
+		<div ng-switch-when="true" ng-class='loginAndRegButtons'>
+			<div ng-include="loginTemplate" ng-class='loginAndRegButtons'></div>
+		</div>
+		<div ng-switch-default ng-class='loginAndRegButtons'>
+			<div ng-include="defaultTemplate" ng-class='loginAndRegButtons'></div>
+		</div>
+	</div>
+
+	<div ng-class='adsContainer' ng-include="templateAds">
+		
+	</div>
+	<div ng-class='filtersContainer' ng-include="templateFilters">
+		
+	</div>
+</div>

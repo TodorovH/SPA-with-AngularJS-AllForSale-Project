@@ -9,8 +9,8 @@ softUni.controller('MainController',
 		$scope.secondHalfOfTheLogo = 'secondHalfOfTheLogo';
 		$scope.divLink = 'divLink';
 		$scope.navLink = 'navLink';
-		$scope.navbar = 'navbar';
-		$scope.navigation = 'navigation';
+		//$scope.navbar = 'navbar';
+		//$scope.navigation = 'navigation';
 		$scope.footer = 'footer';
 		$scope.footerLeftSide = 'footerLeftSide';
 		$scope.section = 'section';
