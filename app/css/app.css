@@ -163,6 +163,7 @@
 	margin-top:4%;
 	text-align: left;
 	font-size: 1.5rem !important;
+	word-wrap:break-word;
 }
 
 .userNameRegDiv,
@@ -196,6 +197,7 @@
 	padding: 0.5%;
 	padding-left: 1%;
 	font-size: 1.4rem;
+	word-wrap:break-word;
 }
 
 .userNameRegDiv>input,
@@ -210,6 +212,7 @@
 	padding: 0.5%;
 	padding-left: 1%;
 	font-size: 1.4rem;
+	word-wrap:break-word;
 }
 
 .townDiv>select {
@@ -346,6 +349,7 @@
 	padding: 2%;
 	font-size: 2rem;
 	color: white;
+	word-wrap:break-word;
 	background: -webkit-linear-gradient(grey, black); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(grey, black); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(grey, black); /* For Firefox 3.6 to 15 */
@@ -357,6 +361,7 @@
 	padding: 3%;
 	font-size: 1.5rem;
 	color: white;
+	word-wrap:break-word;
 }
 
 .adBody {
@@ -386,6 +391,7 @@
 	background: #F7BC50;
 	font-size: 1.2rem;
 	padding:2%;
+	word-wrap:break-word;
 }
 
 .nameContainer,
@@ -456,4 +462,13 @@
 	color:white;
 	border-radius: 5px;
 	font-weight: bold;
+}
+
+.paginationContainer {
+	padding-left: 17%;
+}
+
+.paginationContainer a {
+	background: orange !important;
+	color:white !important;
 }

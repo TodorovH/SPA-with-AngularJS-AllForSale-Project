@@ -1,4 +1,4 @@
-var softUni = angular.module('softUniModule', ['ngResource', 'ngRoute', 'LocalStorageModule']);
+var softUni = angular.module('softUniModule', ['ngResource', 'ngRoute', 'LocalStorageModule', 'ui.bootstrap.pagination']);
 
 softUni.config(['$routeProvider', 'localStorageServiceProvider', function($routeProvider, localStorageServiceProvider) {
 	$routeProvider.when('/ads', {
@@ -19,33 +19,3 @@ softUni.config(['$routeProvider', 'localStorageServiceProvider', function($route
 	localStorageServiceProvider.setStorageType('localStorage');
 	localStorageServiceProvider.setPrefix('allForSaleApp');
 }]);
-
-//function clickEvent() {
-//	$('.hoverAd')
-//		.parent()
-//		.children('div')
-//		.removeClass('hoverAdselected')
-//		.addClass('hoverAd');
-//
-//	$('.hoverAd')
-//		.css('background', 'black')
-//		.removeClass('hoverAd')
-//		.addClass('hoverAdselected');
-//}
-
-//(function () {
-//	jQuery('.hoverAd').click(function () {
-//		$(this).css('background', 'black');
-//	})
-//})();
-
-//$(function(){
-
-//	$('.hoverAd').on('click', function(event) {
-//		event.preventDefault(); 
-//		$(this)
-//			//.find('div.hoverAd')
-//			.css('background', 'black');
-//	});
-
-//});
