@@ -4,8 +4,6 @@ softUni.controller('RightSideController', ['$scope', '$rootScope', 'townsData', 
 		$scope.filterTowns = 'filterTowns';
 		$scope.headerCategory = 'headerCategory';
 		$scope.headerTowns = 'headerTowns';
-		//$scope.hoverAd = 'hoverAd';
-		//$scope.hoverAdselected = 'hoverAdselected';
 
 		townsData.getAllTowns()
 			.$promise
@@ -27,7 +25,5 @@ softUni.controller('RightSideController', ['$scope', '$rootScope', 'townsData', 
 		$scope.categoryClicked = function categoryClicked (category) {
 			filter.filterByCategory(category);
 			$rootScope.$broadcast('categoryClicked', category);
-			//$scope.elementId = $rootScope.elementId;
-			//console.log($scope.elementId);
 		}
 }]);

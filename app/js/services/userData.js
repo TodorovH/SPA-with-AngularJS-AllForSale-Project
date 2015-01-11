@@ -1,5 +1,6 @@
 softUni.factory('userData',['$resource', 'authentication', function($resource, authentication) {
 	var resource = 'http://softuni-ads.azurewebsites.net/api/';
+	//var resource = 'http://localhost:1337/api/';
 
 	function registerUser(user) {
 		var resource = $resource(resource + 'user/register')

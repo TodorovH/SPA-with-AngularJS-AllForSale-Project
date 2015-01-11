@@ -1,5 +1,5 @@
-softUni.controller('LeftSideController', [ '$scope', '$rootScope', 'filter', 'mainData',
-	function($scope, $rootScope, filter, mainData) {
+softUni.controller('LeftSideController', [ '$scope', '$rootScope', 'filter', 'mainData', '$location', '$anchorScroll',
+	function($scope, $rootScope, filter, mainData, $location, $anchorScroll) {
 		$scope.removeListStyle = 'removeListStyle';
 		$scope.adContainer = 'adContainer';
 		$scope.adHeader = 'adHeader';
@@ -20,12 +20,18 @@ softUni.controller('LeftSideController', [ '$scope', '$rootScope', 'filter', 'ma
 
 		$scope.ready = false;
 
-		function loadPublicAds (filterParams) {
-			$rootScope.elementId = filterParams;
-			filterParams = filterParams || {};
-			mainData.getAllAds(filterParams)
+		$scope.maxSize = 5;
+		$scope.bigCurrentPage = 1;
+
+
+		function loadPublicAds (params) {
+			$rootScope.elementId = params;
+			var startpage = $rootScope.page;
+			params = params || {};
+			mainData.getAllAds(params, startpage)
 				.$promise
 				.then(function(data) {
+					$scope.bigTotalItems = data.numItems;
 					$scope.data = data;
 					$scope.ready = true;
 				});
@@ -33,11 +39,23 @@ softUni.controller('LeftSideController', [ '$scope', '$rootScope', 'filter', 'ma
 		
 		loadPublicAds();
 
+		//function goToTop() {
+		//		$location.hash('container');
+		//		$anchorScroll();
+		//}
+
 		$scope.$on('categoryClicked', function (event, category) {
-			loadPublicAds(filter.getFilterParams());
+			loadPublicAds(filter.getParams());
+			//goToTop();
 		});
 
 		$scope.$on('townClicked', function (event, town) {
-			loadPublicAds(filter.getFilterParams());
+			loadPublicAds(filter.getParams());
+			//goToTop();
+		});
+
+		$scope.$on('selectPage', function (event, page) {
+			loadPublicAds(filter.getParams());
+			//goToTop();
 		});
 }]);

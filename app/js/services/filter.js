@@ -1,23 +1,23 @@
 softUni.factory('filter', function(){
-	var filterParams = {};
+	var params = {};
 
 	function filterByCategory(category) {
 		category = category || {};
-		filterParams.categoryId = category.id;
+		params.categoryId = category.id;
 	}
 
 	function filterByTown(town) {
 		town = town || {};
-		filterParams.townId = town.id;
+		params.townId = town.id;
 	}
 
-	function getFilterParams() {
-		return filterParams;
+	function getParams() {
+		return params;
 	}
 
 	return {
 		filterByCategory: filterByCategory,
 		filterByTown: filterByTown,
-		getFilterParams: getFilterParams
+		getParams: getParams
 	}
 });

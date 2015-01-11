@@ -6,7 +6,6 @@ softUni.controller('LoginController',['$scope', '$location', 'userData', 'authen
 		$scope.passwordDiv = 'passwordDiv';
 		$scope.submitButton = 'submitButton';
 		$scope.linkRegister = 'linkRegister';
-
 		$scope.navbar = 'navbar';
 		$scope.navbarInHomePage = 'navbarInHomePage';
 		$scope.navigation = 'navigation';
@@ -14,7 +13,6 @@ softUni.controller('LoginController',['$scope', '$location', 'userData', 'authen
 		$scope.greetings = 'greetings';
 		$scope.defaultTemplate = 'templates/loginAndRegisterButtons.html';
 		$scope.loginTemplate = 'templates/logoutButton.html';
-
 		$scope.isLoggedIn = authentication.isLoggedIn();
 
 	$scope.login = function(user) {

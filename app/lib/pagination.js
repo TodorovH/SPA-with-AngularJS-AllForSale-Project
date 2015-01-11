@@ -1,6 +1,6 @@
 angular.module('ui.bootstrap.pagination', [])
 
-.controller('PaginationController', ['$scope', '$attrs', '$parse', function ($scope, $attrs, $parse) {
+.controller('PaginationController', ['$scope', '$rootScope', '$attrs', '$parse', function ($scope, $rootScope, $attrs, $parse) {
   var self = this,
       ngModelCtrl = { $setViewValue: angular.noop }, // nullModelCtrl
       setNumPages = $attrs.numPages ? $parse($attrs.numPages).assign : angular.noop;
@@ -30,13 +30,19 @@ angular.module('ui.bootstrap.pagination', [])
 
   this.render = function() {
     $scope.page = parseInt(ngModelCtrl.$viewValue, 10) || 1;
+    //$rootScope.page = $scope.page; //myCode!!!
   };
 
   $scope.selectPage = function(page) {
     if ( $scope.page !== page && page > 0 && page <= $scope.totalPages) {
       ngModelCtrl.$setViewValue(page);
       ngModelCtrl.$render();
+      $rootScope.page = $scope.page;
+      $rootScope.$broadcast('selectPage', page); //myCode!!!
     }
+
+
+
   };
 
   $scope.getText = function( key ) {
@@ -175,6 +181,8 @@ angular.module('ui.bootstrap.pagination', [])
         originalRender();
         if (scope.page > 0 && scope.page <= scope.totalPages) {
           scope.pages = getPages(scope.page, scope.totalPages);
+
+          //console.log(scope.pages);
         }
       };
     }

@@ -15,7 +15,6 @@ softUni.config(['$routeProvider', 'localStorageServiceProvider', function($route
 	});
 	$routeProvider.otherwise({redirectTo: '/ads'});
 
-	// Web Storage settings
 	localStorageServiceProvider.setStorageType('localStorage');
 	localStorageServiceProvider.setPrefix('allForSaleApp');
 }]);
